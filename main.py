@@ -1,9 +1,29 @@
 from Lib import *
 
-nodo1 = nodo(2)
-nodo2 = nodo(10)
-nodo3 = nodo(5)
-nodo1.izquierda = nodo3
-nodo1.derecha = nodo3
+inOrderArr=[]
 
-print(nodo1)
+nodo1 = nodo(1)
+nodo2 = nodo(2)
+nodo3 = nodo(3)
+nodo4 = nodo(4)
+nodo5 = nodo(5)
+nodo6 = nodo(6)
+nodo7 = nodo(7)
+nodo8 = nodo(8)
+nodo9 = nodo(9)
+
+
+linkHijo(nodo1,nodo2,nodo3)
+linkHijo(nodo2,nodo4,nodo5)
+linkHijo(nodo3,nodo6,nodo7)
+linkHijo(nodo4,nodo8,nodo9)
+
+LVR(nodo1,inOrderArr)
+
+
+print(inOrderArr)
+
+
+
+#print(nodo1.getArbol())
+#print(nodo2.getArbol())

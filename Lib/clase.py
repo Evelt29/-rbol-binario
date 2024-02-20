@@ -4,7 +4,18 @@ class nodo():
         self.izquierda = None
         self.derecha = None
         pass
+
+    
+    def getArbol(self):
+        strOut = " "
+        strOut += f"Nodo Padre [{self.valor}]"
+        if type(self.izquierda) != type(None):
+            strOut += f"  [{self.valor}]->[{self.izquierda}]" 
+        if self.derecha is not None:
+            strOut += f"  [{self.valor}]->[{self.derecha}]"
+        return strOut
+    
     def __str__(self):
-        return f"valor: {self.valor}, izq: {self.izquierda}, der: {self.derecha}"
+        return f"valor:{self.valor}"
     
 pass
