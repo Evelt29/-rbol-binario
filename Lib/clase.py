@@ -10,9 +10,9 @@ class nodo():
         strOut = " "
         strOut += f"Nodo Padre [{self.valor}]"
         if type(self.izquierda) != type(None):
-            strOut += f"  [{self.valor}]->[{self.izquierda}]" 
+            strOut += f"  Iz[{self.valor}]->[{self.izquierda}]" 
         if self.derecha is not None:
-            strOut += f"  [{self.valor}]->[{self.derecha}]"
+            strOut += f"  Der[{self.valor}]->[{self.derecha}]"
         return strOut
     
     def __str__(self):
