@@ -60,14 +60,7 @@ for i in range (0,len(arrNodos),1):
     else:
         nodosOrdenados(nodoRaiz,nodo(arrNodos[i]))
     pass
-
-def printArbol(nodo):
-    if nodo is not None:
-        nodoPadre = nodo
-        print(nodoPadre.getArbol())
-        printArbol(nodoPadre.izquierda)
-        printArbol(nodoPadre.derecha)
-    return 0        
+     
 printArbol(nodoRaiz)
     
     

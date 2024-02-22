@@ -52,3 +52,11 @@ def nodosOrdenados(nodoPadre, newNodo):
             nodoPadre.derecha = newNodo
         else:
             nodosOrdenados(nodoPadre.derecha, newNodo)
+            
+def printArbol(nodo):
+    if nodo is not None:
+        nodoPadre = nodo
+        print(nodoPadre.getArbol())
+        printArbol(nodoPadre.izquierda)
+        printArbol(nodoPadre.derecha)
+    return 0   
