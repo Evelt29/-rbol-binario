@@ -64,4 +64,24 @@ for i in range (0,len(arrNodos),1):
 printArbol(nodoRaiz)
     
     
+#-----------------------------------------------------------------------
+arrayNum=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+nodoRaiz = nodo(arrayNum[0])
+cola=[]
 
+def agregaNodos(nodoRaiz):
+    
+    if nodoRaiz.izquierda is None:
+        nodoRaiz.izquierda = nodo(arrayNum[i])
+        return 0
+        
+    if nodoRaiz.derecha is None:
+        nodoRaiz.derecha = nodo(arrayNum[i])
+        
+    cola.append(nodoRaiz.izquierda)
+    cola.append(nodoRaiz.derecha)    
+
+    
+    currentNodo= cola.pop()
+    agregaNodos(currentNodo, )
+    return 0
