@@ -1,5 +1,5 @@
 from Lib import *
-
+import sys 
 inOrderArr=[]
 
 nodo1 = nodo(1)
@@ -67,21 +67,41 @@ printArbol(nodoRaiz)
 #-----------------------------------------------------------------------
 arrayNum=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 nodoRaiz = nodo(arrayNum[0])
-cola=[]
-
-def agregaNodos(nodoRaiz):
-    
-    if nodoRaiz.izquierda is None:
-        nodoRaiz.izquierda = nodo(arrayNum[i])
-        return 0
-        
-    if nodoRaiz.derecha is None:
-        nodoRaiz.derecha = nodo(arrayNum[i])
-        
-    cola.append(nodoRaiz.izquierda)
-    cola.append(nodoRaiz.derecha)    
 
     
-    currentNodo= cola.pop()
-    agregaNodos(currentNodo, )
-    return 0
+
+for i in range(1, len(arrayNum),1):
+    agregaNodos(nodoRaiz, arrayNum[i])
+    
+"""for i in arrayNum:
+    agregaNodos(nodoRaiz, i)
+    
+j=1
+while arrayNum:
+    agregaNodos(nodoRaiz, arrayNum[j])
+    j+1"""
+
+printArbol(nodoRaiz)
+inOrderArr = []
+LVR(nodoRaiz, inOrderArr)
+print("InOrder:", end=" ")
+print(inOrderArr)
+
+postOrderArr = []
+LRV(nodoRaiz, postOrderArr)
+print("PostOrder:", end=" ")
+print(postOrderArr)
+
+
+preOrderArr = []
+VLF(nodoRaiz, preOrderArr)
+print("PreOrder:", end=" ")
+print(preOrderArr)
+
+
+
+
+sys.exit("Fin de Programa")
+
+
+
